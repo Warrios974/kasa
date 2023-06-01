@@ -1,8 +1,27 @@
 import React from 'react'
+import Navbar from './Navbar'
+import styled from 'styled-components'
+import { ReactComponent as LogoColor } from "../assets/logo/logo-color.svg";
+
+const StyleLogoColor = styled(LogoColor)`
+    width: 8em;
+`
+
+const HeaderHtml = styled.header`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 80%;
+`
 
 function Header() {
   return (
-    <header>Header</header>
+    <HeaderHtml>
+        <StyleLogoColor />
+        <Navbar />
+    </HeaderHtml>
   )
 }
 

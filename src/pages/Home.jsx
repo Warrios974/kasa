@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
+const Main = styled.div`
+
+`
 function Home() {
 
   const [logementsData, setLogementData] = useState([])
@@ -25,7 +29,9 @@ function Home() {
   }, [])
 
   return (
-    <div>Home</div>
+    <Main>
+      Home
+    </Main>
   )
 }
 
