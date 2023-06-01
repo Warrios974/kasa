@@ -1,37 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import Banner from '../components/Banner'
+import Card from '../components/Card'
+import data from '../data/logement.json'
+import colors from '../utils/style/colors.js'
 
-const Main = styled.div`
-
+const StyledSection = styled.section`
+  margin: 2rem 0;
+  display: flex;
+  background-color: ${colors.background};
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  gap: 3%;
+  flex-direction: row;
+  padding: 3rem;
 `
-function Home() {
 
-  const [logementsData, setLogementData] = useState([])
-  const [logementLoadingData, setLogementLoadingData] = useState(true)
-  const [error, setError] = useState(null)
+function Home() {
 
   useEffect(() => {
     const getLogements = async () => {
-      try {
-        const fetchLogements = await fetch('./data/logement.json')
-        const dataLogements = await fetchLogements.json()
-        setLogementData(dataLogements)
-      } catch (error) {
-        console.log('====');
-        console.log('error',error);
-        console.log('====');
-        setError(true)
-      }finally{
-        setLogementLoadingData(false)
-      }
+      
     }
     getLogements()
   }, [])
 
   return (
-    <Main>
-      Home
-    </Main>
+    <>
+      <Banner />
+      <StyledSection>
+      { data.map((logement) => (
+              <Card 
+                key={`${logement.id}-logement`}
+                card={logement}  />
+          ))
+        }
+
+      </StyledSection>
+    </>
   )
 }
 

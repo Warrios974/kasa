@@ -15,7 +15,7 @@ const Main = styled.div`
   max-width: 100%;
   min-width: 100%;
 `
-const Section = styled.div`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
