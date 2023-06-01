@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
@@ -25,9 +25,14 @@ function Home() {
     getLogements()
   }, [])
 
+  const propsBanner = {
+    title : 'Chez vous, partout et ailleurs',
+    background: '/image/background-banner-home.png'
+  }
+
   return (
     <>
-      <Banner />
+      <Banner propsBanner={propsBanner}/>
       <StyledSection>
       { data.map((logement) => (
               <Card 
