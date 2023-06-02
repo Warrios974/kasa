@@ -49,7 +49,7 @@ function Card(props) {
   const { id, title, cover} = props.card
 
   return (
-    <StyledLink to={`/logement?${id}`} >
+    <StyledLink to={`/logement/${id}`} >
       <StyledImgFilter />
       <StyledCover src={cover} alt={title}/>
       <StyledTitle>{title}</StyledTitle>
