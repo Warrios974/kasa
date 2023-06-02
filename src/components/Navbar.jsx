@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from "../utils/style/colors.js";
+import sizes from '../utils/style/police.js'
 
 const Nav = styled.nav`
     display: flex;
@@ -11,6 +12,7 @@ const Nav = styled.nav`
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${colors.primary};
+    font-size: ${sizes.linkPhone};
 `
 
 function Navbar() {

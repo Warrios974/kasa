@@ -3,6 +3,8 @@ import Header from './Header'
 import Footer from './Footer'
 import Router from './Router'
 import styled from 'styled-components'
+import colors from '../utils/style/colors.js'
+//import sizes from '../utils/style/police.js'
 
 const Container = styled.main`
   display: flex;
@@ -12,15 +14,18 @@ const Main = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
 `
 const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 1rem 0;
   width: 80%;
+  color: ${colors.primary};
+  max-width: 1280px;
+  font-family: 'Montserrat';
 `
 
 function Layout() {

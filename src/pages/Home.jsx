@@ -8,12 +8,20 @@ import colors from '../utils/style/colors.js'
 const StyledSection = styled.section`
   margin: 2rem 0;
   display: flex;
-  background-color: ${colors.background};
-  border-radius: 1rem;
+  justify-content: center;
+  
+  background-color: ${colors.white};
+  border-radius: .6rem;
   flex-wrap: wrap;
-  gap: 3%;
+  gap: 2rem;
   flex-direction: row;
-  padding: 3rem;
+  padding: 0;
+
+  @media only screen and (min-width: 768px) {
+    padding: 2rem;
+    background-color: ${colors.background};
+  }
+
 `
 
 function Home() {

@@ -13,6 +13,7 @@ const HeaderHtml = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    max-width: 1280px;
     width: 80%;
 `
 

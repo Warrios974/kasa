@@ -29,12 +29,13 @@ const StyledHeader = styled.div`
     background-color: ${colors.primary};
     color: ${colors.white};
     border-radius: .3rem;
-    padding: .3rem 1rem;
+    padding: .5rem 1rem;
 `
 const StyledBody = styled.div`
     color: ${colors.primary}; 
     padding: 1rem;
-    animation: ${open} 2ms linear ;;
+    animation: ${open} 2ms linear;
+    text-align: left;
 `
 
 function Collapse({ collapse }) {
@@ -58,8 +59,8 @@ function Collapse({ collapse }) {
     <StyledContainer>
         <StyledHeader onClick={() => handleClick()}>
             <span>{title}</span>
-            { !collapseOpen ? <FontAwesomeIcon icon="fa-solid fa-angle-up" /> : '' }
-            { collapseOpen ? <FontAwesomeIcon icon="fa-solid fa-angle-down" />: '' }
+            { collapseOpen ? <FontAwesomeIcon icon="fa-solid fa-angle-up" /> : '' }
+            { !collapseOpen ? <FontAwesomeIcon icon="fa-solid fa-angle-down" />: '' }
         </StyledHeader>
         { collapseOpen ? <StyledBody><p>{description}</p></StyledBody> : '' }
     </StyledContainer>
