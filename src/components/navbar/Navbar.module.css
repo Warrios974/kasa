@@ -13,9 +13,11 @@
     text-decoration: none;
     color: colorPrimary;
     font-size: textLinkPhone;
+    text-transform: uppercase;
 
     @media only screen and (min-width: 768px) {
         font-size: textLink;
+        text-transform: none;
     }
 
 }

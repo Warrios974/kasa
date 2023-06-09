@@ -2,7 +2,7 @@
 @value colorWhite, colorPrimary, colorStarsGray from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textHeaderPhone, textSubTitlePhone, textStars, textStarsPhone, textParagraphePhone, textParagraphe from sizes;
+@value textTitle, textSubTitlePhone, textStars, textStarsPhone, textParagraphePhone, textParagraphe from sizes;
 
 .sectionInfoContainer{
     display: flex;
@@ -14,15 +14,21 @@
         width: 100%;
 
         @media only screen and (min-width: 768px) {
-            width: 50%;
+            width: 65%;
         }
 
     }
 }
 
 .title{
-    font-size: textHeaderPhone;
+    font-size: textTitle;
     font-weight: 100;
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: 768px) {
+        
+    }
+
 }
 
 .subTitle{
@@ -33,7 +39,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: .5rem;
+    margin: .5rem 0;
 }
 
 .rateAndHostContainer{
@@ -48,14 +54,18 @@
         flex-direction: column-reverse;
         align-items: end;
         justify-content: center;
-        width: 50%;
+        width: 35%;
     }
 
 }
 
 .rateContainer{
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     font-size: textStarsPhone;
+
+    > i{
+        padding: .3rem;
+    }
 
     @media only screen and (min-width: 768px) {
         font-size: textStars;
@@ -66,16 +76,19 @@
 .hostContainer{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+
     > div:first-child {
         font-size: textParagraphePhone;
-        margin-right: .5rem;
+        margin-right: 1rem;
         text-align: right;
+        font-weight: 500;
     }
     
     > div:last-child {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 100%;
         overflow: hidden;
         > img{

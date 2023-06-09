@@ -1,10 +1,12 @@
 @value widthMain: 1280px;
 @value textHeader: 3rem;
 @value textHeaderPhone: 25px;
+@value textTitle: 36px;
+@value textTitlePhone: 36px;
 @value textSubTitle: 36px;
 @value textSubTitlePhone: 18px;
-@value textParagraphe: 15px;
-@value textParagraphePhone: 12px;
+@value textParagraphe: 18px;
+@value textParagraphePhone: 15px;
 @value textNotFound: 15em;
 @value textNotFoundPhone : 96px;
 @value textLink: 18px;

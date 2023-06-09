@@ -13,8 +13,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    border: .6rem;
-    overflow: hidden;
   
     @media only screen and (min-width: 768px) {
       height: 30rem;
@@ -29,6 +27,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: .6rem;
 }
 
 .iconCarrousel{

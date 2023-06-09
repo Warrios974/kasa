@@ -21,6 +21,11 @@
     }
 }
 
+.InPageAbout{
+    composes: section;
+    height: 15rem;
+}
+
 .imgCover{
     z-index: 1000;
     position: absolute;
