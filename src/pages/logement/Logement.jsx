@@ -3,13 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import data from '../../data/logement.json'
 import Slideshow from '../../components/slideshow/Slideshow'
 import Tag from '../../components/tag/Tag'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Collapse from '../../components/collapse/Collapse'
 import style from './Logement.module.css'
-
-library.add(faStar)
 
 function Logement() {
 
@@ -93,7 +88,7 @@ function Logement() {
                         <div className={style.rateContainer}>
                             {
                                 ratingTab.map((element,index) => (
-                                    element === true ? <FontAwesomeIcon key={`${index}-stars-true-${idLogement}`} icon="fa-solid fa-star" /> : <FontAwesomeIcon className={style.starGray} key={`${index}-stars-false`} icon="fa-solid fa-star"/>
+                                    element === true ? <i key={`${index}-stars-true-${idLogement}`} className="fa-solid fa-star" /> : <i className={`fa-solid fa-star ${style.starGray}`} key={`${index}-stars-false`}/>
                                 ))
                             }
                         </div>

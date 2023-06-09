@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import style from './Slideshow.module.css'
 
-library.add(faChevronLeft, faChevronRight)
 
 function Slideshow({ pictures }) {
 
@@ -49,9 +45,8 @@ function Slideshow({ pictures }) {
 
   if(!onlyOne) return (
     <div className={style.divCarrouselContainer}>
-        <FontAwesomeIcon 
-          className={style.iconCarrousel}
-          icon="fa-solid fa-chevron-left" 
+        <i 
+          className={`fa-solid fa-chevron-left ${style.iconCarrousel}`}
           onClick={() => handleClick('previous')}
           />
 
@@ -64,9 +59,8 @@ function Slideshow({ pictures }) {
         alt="" 
         loading='lazy'/>
 
-        <FontAwesomeIcon 
-          className={style.iconCarrousel}
-          icon="fa-solid fa-chevron-right" 
+        <i 
+          className={`fa-solid fa-chevron-right ${style.iconCarrousel}`}
           onClick={() => handleClick('next')}
           />
     </div>
