@@ -1,9 +1,24 @@
 import React, { useState } from 'react'
 import style from './Collapse.module.css'
 
-function Collapse({ title, description }) {
+function Collapse({ title, description, idLogement }) {
 
     const [collapseOpen, setCollapseOpen] = useState(true)
+
+    const type = typeof(description)
+
+    const ListEquipements = () => {
+
+        return(
+            <ul>
+                {
+                    description.map((equipement, index) => (
+                        <li key={`${index}-${idLogement}`}>{equipement}</li>
+                    ))
+                }
+            </ul>
+        )
+    }
 
     const handleClick = () => {
         if (collapseOpen === false) {
@@ -23,7 +38,12 @@ function Collapse({ title, description }) {
             { collapseOpen ? <i className="fa-solid fa-angle-up" /> : '' }
             { !collapseOpen ? <i className="fa-solid fa-angle-down" />: '' }
         </div>
-        { collapseOpen ? <div className={style.divBody}>{description}</div> : '' }
+        { collapseOpen ? 
+            <div className={style.divBody}>
+                {
+                type === 'object' ? <ListEquipements /> : description
+                }
+            </div> : '' }
     </div>
   )
 }
