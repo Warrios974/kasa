@@ -1,0 +1,30 @@
+@value colors: "../../utils/style/colors.module.css";
+@value colorPrimary from colors;
+
+@value sizes: "../../utils/style/sizes.module.css";
+@value textNotFound, textSubTitle, textNotFoundPhone, textLinkPhone from sizes;
+
+.titleNotFound{
+    font-size: textNotFoundPhone;
+    font-weight: 700;
+    
+    @media only screen and (min-width: 768px) {
+      width: 90%;
+      margin: 1rem 0;  
+      font-size: textNotFound;
+    }
+}
+
+.spanInstruction{
+    font-size: textNotFoundPhone;
+    
+    @media only screen and (min-width: 768px) {
+      font-size: textSubTitle;
+    }
+}
+
+.linkHome{
+    margin: 4rem 0;
+    color: colorPrimary;
+      font-size: textLinkPhone;
+}

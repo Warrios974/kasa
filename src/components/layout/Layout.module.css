@@ -1,0 +1,29 @@
+@value colors: "../../utils/style/colors.module.css";
+@value colorPrimary, colorFooter from colors;
+
+@value sizes: "../../utils/style/sizes.module.css";
+@value widthMain from sizes;
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.divMain{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sectionPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    width: 80%;
+    color: colorPrimary;
+    max-width: widthMain;
+    font-family: 'Montserrat';
+}

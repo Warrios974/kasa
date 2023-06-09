@@ -1,0 +1,61 @@
+@value colors: "../../utils/style/colors.module.css";
+@value colorWhite, colorPrimary from colors;
+
+@value sizes: "../../utils/style/sizes.module.css";
+@value testparagraphe from sizes;
+
+.divCarrouselContainer{
+    z-index: 2000;
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: .6rem;
+    overflow: hidden;
+  
+    @media only screen and (min-width: 768px) {
+      height: 30rem;
+    }
+  
+}
+
+.imgCarrousel{
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.iconCarrousel{
+    z-index: 1100;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: colorWhite;
+    cursor: pointer;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 3rem;
+    }
+  
+}
+
+.pagination{
+    z-index: 1100;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: colorWhite;
+    font-size: testparagraphe;
+  
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
+  
+}

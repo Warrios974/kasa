@@ -1,45 +1,28 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import styled from 'styled-components'
-import colors from "../../utils/style/colors.js";
-import sizes from '../../utils/style/police.js'
-
-
-const Nav = styled.nav`
-    display: flex;
-    gap: 1rem;
-`
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${colors.primary};
-    font-size: ${sizes.linkPhone};
-    ${(props) =>
-        props.$active &&
-        `text-decoration: underline;`}
-`
+import style from './Navbar.module.css'
 
 function Navbar() {
 
   const { pathname } = useLocation()
 
   if(pathname === '/') return (
-    <Nav>
-        <StyledLink to="/" $active>Accueil</StyledLink>
-        <StyledLink to="/about">A propos</StyledLink>
-    </Nav>
+    <nav className={style.navContainer}>
+        <Link className={style.underline} to="/">Accueil</Link>
+        <Link className={style.link} to="/about">A propos</Link>
+    </nav>
   )
   if(pathname === '/about') return (
-    <Nav>
-        <StyledLink to="/">Accueil</StyledLink>
-        <StyledLink to="/about" $active>A propos</StyledLink>
-    </Nav>
+    <nav className={style.navContainer}>
+        <Link className={style.link} to="/">Accueil</Link>
+        <Link className={style.underline} to="/about">A propos</Link>
+    </nav>
   )
   return (
-    <Nav>
-        <StyledLink to="/">Accueil</StyledLink>
-        <StyledLink to="/about">A propos</StyledLink>
-    </Nav>
+    <nav className={style.navContainer}>
+        <Link className={style.link} to="/">Accueil</Link>
+        <Link className={style.link} to="/about">A propos</Link>
+    </nav>
   )
 }
 

@@ -1,0 +1,21 @@
+@value colors: "../../utils/style/colors.module.css";
+@value colorWhite, colorBackground from colors;
+
+.sectionContainer{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    
+    background-color: colorWhite;
+    border-radius: .6rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: row;
+    padding: 0;
+  
+    @media only screen and (min-width: 768px) {
+      padding: 2rem;
+      background-color: colorBackground;
+    }
+  
+}

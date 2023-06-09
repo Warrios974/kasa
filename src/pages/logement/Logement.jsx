@@ -2,124 +2,14 @@ import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import data from '../../data/logement.json'
 import Slideshow from '../../components/slideshow/Slideshow'
-import styled from 'styled-components'
-import sizes from '../../utils/style/police'
 import Tag from '../../components/tag/Tag'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import colors from '../../utils/style/colors'
 import Collapse from '../../components/collapse/Collapse'
+import style from './Logement.module.css'
 
 library.add(faStar)
-
-const SlyledSectionInfo = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: left;
-    > div:first-child{
-        width: 100%;
-
-        @media only screen and (min-width: 768px) {
-            width: 50%;
-        }
-
-    }
-`
-const SlyledTitle = styled.h2`
-    font-size: ${sizes.headerPhone};
-    font-weight: 100;
-`
-const SlyledSubTitle = styled.span`
-    font-size: ${sizes.subTitlePhone};
-    
-`
-const SlyledSectionTags = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: .5rem;
-`
-const SlyledSectionRateAndHost = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
-
-    @media only screen and (min-width: 768px) {
-        flex-direction: column-reverse;
-        align-items: end;
-        justify-content: center;
-        width: 50%;
-    }
-
-`
-const SlyledRate = styled.div`
-    margin: 1rem 0;
-    font-size: ${sizes.starsPhone};
-
-    @media only screen and (min-width: 768px) {
-        font-size: ${sizes.stars};
-    }
-
-`
-const SlyledHost = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    > div:first-child {
-        font-size: ${sizes.paragraphePhone};
-        margin-right: .5rem;
-        text-align: right;
-    }
-    
-    > div:last-child {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 100%;
-        overflow: hidden;
-        > img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    @media only screen and (min-width: 768px) {
-        > div:first-child {
-            font-size: ${sizes.paragraphe};
-        }
-        > div:last-child {
-            width: 4rem;
-            height: 4rem;
-        }
-    }
-
-`
-const FontAwesomeIconGray = styled(FontAwesomeIcon)`
-    color: ${colors.background};
-`
-const StyledSectionCollapse = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    > div{
-        width: 100%;
-    }
-
-    @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    gap: 2%;
-        > div{
-            width: 50%;
-        }
-    }
-
-`
 
 function Logement() {
 
@@ -184,11 +74,11 @@ function Logement() {
                     pictures={pictures}
                     idLogement={idLogement}
                 />
-                <SlyledSectionInfo>
+                <div className={style.sectionInfoContainer}>
                     <div>
-                        <SlyledTitle>{title}</SlyledTitle>
-                        <SlyledSubTitle>{location}</SlyledSubTitle>
-                        <SlyledSectionTags>
+                        <h3 className={style.title}>{title}</h3>
+                        <span className={style.subTitle}>{location}</span>
+                        <div className={style.tagContainer}>
                             {
                                 tags.map((tag, index) => (
                                 <Tag 
@@ -197,17 +87,17 @@ function Logement() {
                                     />
                                 ))
                             }
-                        </SlyledSectionTags>
+                        </div>
                     </div>
-                    <SlyledSectionRateAndHost>
-                        <SlyledRate>
+                    <div className={style.rateAndHostContainer}>
+                        <div className={style.rateContainer}>
                             {
                                 ratingTab.map((element,index) => (
-                                    element === true ? <FontAwesomeIcon key={`${index}-stars-true-${idLogement}`} icon="fa-solid fa-star" /> : <FontAwesomeIconGray key={`${index}-stars-false`} icon="fa-solid fa-star"/>
+                                    element === true ? <FontAwesomeIcon key={`${index}-stars-true-${idLogement}`} icon="fa-solid fa-star" /> : <FontAwesomeIcon className={style.starGray} key={`${index}-stars-false`} icon="fa-solid fa-star"/>
                                 ))
                             }
-                        </SlyledRate>
-                        <SlyledHost>
+                        </div>
+                        <div className={style.hostContainer}>
                             <div>
                                 <div>{firstName}</div>
                                 <div>{lastName}</div>
@@ -215,9 +105,9 @@ function Logement() {
                             <div>
                                 <img src={host.picture} alt={host.name} />
                             </div>
-                        </SlyledHost>
-                    </SlyledSectionRateAndHost>
-                    <StyledSectionCollapse>
+                        </div>
+                    </div>
+                    <div className={style.collapseContainer}>
                         <Collapse 
                             title={'Description'}
                             description={description}
@@ -226,8 +116,8 @@ function Logement() {
                             title={'Equipements'}
                             description={listEquipements()}
                             />
-                    </StyledSectionCollapse>
-                </SlyledSectionInfo>
+                    </div>
+                </div>
             </>
         )
     }

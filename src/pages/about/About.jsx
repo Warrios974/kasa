@@ -1,20 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import Collapse from '../../components/collapse/Collapse'
 import Banner from '../../components/banner/Banner'
-
-const StyledSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 2rem 0;  
-  
-  @media only screen and (min-width: 768px) {
-    width: 90%;
-    margin: 1rem 0;  
-  }
-`
+import style from './About.module.css'
 
 function About() {
 
@@ -45,7 +32,7 @@ function About() {
 return (
   <>
       <Banner propsBanner={propsBanner} />
-      <StyledSection>
+      <section className={style.sectionContainer}>
         {
           collapses.map((collapse) => (
             <Collapse 
@@ -55,7 +42,7 @@ return (
             />
           ))
         }
-      </StyledSection>
+      </section>
   </>
 )
 }

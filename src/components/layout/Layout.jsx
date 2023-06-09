@@ -2,43 +2,19 @@ import React from 'react'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import Router from '../router/Router'
-import styled from 'styled-components'
-import colors from '../../utils/style/colors.js'
-//import sizes from '../utils/style/police.js'
-
-const Container = styled.main`
-  display: flex;
-  justify-content: center;
-`
-const Main = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-`
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 0;
-  width: 80%;
-  color: ${colors.primary};
-  max-width: 1280px;
-  font-family: 'Montserrat';
-`
+import style from './Layout.module.css'
 
 function Layout() {
   return (
-    <Container>
-      <Main>
+    <main className={style.mainContainer}>
+      <div className={style.divMain}>
         <Header />
-        <Section>
+        <section className={style.sectionPage}>
           <Router />
-        </Section>
+        </section>
         <Footer />
-      </Main>
-    </Container>
+      </div>
+    </main>
   )
 }
 

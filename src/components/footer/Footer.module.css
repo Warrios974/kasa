@@ -1,0 +1,22 @@
+@value colors: "../../utils/style/colors.module.css";
+@value colorWhite, colorFooter from colors;
+
+@value sizes: "../../utils/style/sizes.module.css";
+@value textParagraphe from sizes;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+    background-color: colorFooter;
+}
+
+.logo{
+    width: 10em;
+}
+
+.text{
+    color: colorWhite;
+}
