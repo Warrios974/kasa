@@ -50,7 +50,8 @@ return (
           collapses.map((collapse) => (
             <Collapse 
               key={`${collapse.title}`}
-              collapse={collapse}
+              title={collapse.title}
+              description={<span>{collapse.description}</span>}
             />
           ))
         }

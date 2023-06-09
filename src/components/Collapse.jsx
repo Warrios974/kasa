@@ -18,7 +18,6 @@ const open = keyframes`
 `
 const StyledContainer = styled.div`
     width: 100%;
-    background-color: ${colors.background};
     margin: 1rem 0;
 `
 const StyledHeader = styled.div`
@@ -36,11 +35,15 @@ const StyledBody = styled.div`
     padding: 1rem;
     animation: ${open} 2ms linear;
     text-align: left;
+    background-color: ${colors.background};
+    > ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 `
 
-function Collapse({ collapse }) {
-    
-    const { title, description } = collapse
+function Collapse({ title, description }) {
 
     const [collapseOpen, setCollapseOpen] = useState(true)
 
@@ -62,7 +65,7 @@ function Collapse({ collapse }) {
             { collapseOpen ? <FontAwesomeIcon icon="fa-solid fa-angle-up" /> : '' }
             { !collapseOpen ? <FontAwesomeIcon icon="fa-solid fa-angle-down" />: '' }
         </StyledHeader>
-        { collapseOpen ? <StyledBody><p>{description}</p></StyledBody> : '' }
+        { collapseOpen ? <StyledBody>{description}</StyledBody> : '' }
     </StyledContainer>
   )
 }

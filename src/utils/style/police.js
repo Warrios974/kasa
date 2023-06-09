@@ -8,6 +8,8 @@ const sizes = {
     notFound : '15em',
     notFoundPhone : '96px',
     link : '15px',
+    stars : '25px',
+    starsPhone : '18px',
 }
 
 export default sizes

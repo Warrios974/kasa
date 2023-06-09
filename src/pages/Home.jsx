@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Banner from '../components/Banner'
 import Card from '../components/Card'
-import data from '../data/logement.json'
 import colors from '../utils/style/colors.js'
+import data from '../data/logement.json'
 
 const StyledSection = styled.section`
   margin: 2rem 0;
@@ -32,6 +32,7 @@ function Home() {
     }
     getLogements()
   }, [])
+
 
   const propsBanner = {
     title : 'Chez vous, partout et ailleurs',
