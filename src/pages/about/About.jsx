@@ -38,7 +38,7 @@ return (
             <Collapse 
               key={`${collapse.title}`}
               title={collapse.title}
-              description={<span>{collapse.description}</span>}
+              description={collapse.description}
             />
           ))
         }
