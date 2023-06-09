@@ -2,12 +2,20 @@
 @value colorWhite, colorPrimary from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textParagraphePhone from sizes;
+@value textParagraphePhone, textTag from sizes;
+
+
+.tagContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: .5rem 0;
+}
 
 .tag{
     background-color: colorPrimary;
     color: colorWhite;
-    font-size: textParagraphePhone;
+    font-size: textTag;
     margin-right: 1rem;
     margin-top: .5rem;
     padding: .3rem 2rem;
