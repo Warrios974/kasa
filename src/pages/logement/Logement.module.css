@@ -35,13 +35,6 @@
     font-size: textSubTitlePhone;
 }
 
-.tagContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: .5rem 0;
-}
-
 .rateAndHostContainer{
     display: flex;
     flex-direction: row;
@@ -55,20 +48,6 @@
         align-items: end;
         justify-content: center;
         width: 35%;
-    }
-
-}
-
-.rateContainer{
-    margin: 1.5rem 0;
-    font-size: textStarsPhone;
-
-    > i{
-        padding: .3rem;
-    }
-
-    @media only screen and (min-width: 768px) {
-        font-size: textStars;
     }
 
 }

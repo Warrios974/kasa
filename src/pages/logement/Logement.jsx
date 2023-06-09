@@ -5,6 +5,7 @@ import Slideshow from '../../components/slideshow/Slideshow'
 import Tag from '../../components/tag/Tag'
 import Collapse from '../../components/collapse/Collapse'
 import style from './Logement.module.css'
+import Rating from '../../components/rating/Rating'
 
 function Logement() {
 
@@ -31,38 +32,6 @@ function Logement() {
         const firstName = splitName[0]
         const lastName = splitName[1]
 
-        const ratingTab = []
-
-        const ratingStars = () => {
-            
-            const number = parseInt(rating, 10)
-
-            for (let index = 0; index < number; index++) {
-                ratingTab.push(true)
-            }
-
-            for (let index = 0; index < 5 - number; index++) {
-                ratingTab.push(false)
-            }
-
-            return ratingTab
-        }
-
-        const listEquipements = () => {
-
-            return(
-                <ul>
-                    {
-                        equipments.map((equipement, index) => (
-                            <li key={`${index}-${idLogement}`}>{equipement}</li>
-                        ))
-                    }
-                </ul>
-            )
-        }
-
-        ratingStars()
-
         return (
             <>
                 <Slideshow 
@@ -73,25 +42,13 @@ function Logement() {
                     <div>
                         <h3 className={style.title}>{title}</h3>
                         <span className={style.subTitle}>{location}</span>
-                        <div className={style.tagContainer}>
-                            {
-                                tags.map((tag, index) => (
-                                <Tag 
-                                    key={`${index}-tag`}
-                                    tag={tag}
-                                    />
-                                ))
-                            }
-                        </div>
+                        <Tag tags={tags}/>
                     </div>
                     <div className={style.rateAndHostContainer}>
-                        <div className={style.rateContainer}>
-                            {
-                                ratingTab.map((element,index) => (
-                                    element === true ? <i key={`${index}-stars-true-${idLogement}`} className="fa-solid fa-star" /> : <i className={`fa-solid fa-star ${style.starGray}`} key={`${index}-stars-false`}/>
-                                ))
-                            }
-                        </div>
+                        <Rating 
+                            rating={rating} 
+                            idLogement={idLogement}
+                            />
                         <div className={style.hostContainer}>
                             <div>
                                 <div>{firstName}</div>
@@ -106,10 +63,12 @@ function Logement() {
                         <Collapse 
                             title={'Description'}
                             description={description}
+                            idLogement={idLogement}
                             />
                         <Collapse 
                             title={'Equipements'}
-                            description={listEquipements()}
+                            description={equipments}
+                            idLogement={idLogement}
                             />
                     </div>
                 </div>
