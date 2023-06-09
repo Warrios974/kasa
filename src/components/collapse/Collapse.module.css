@@ -7,6 +7,8 @@
 .divContainer{
     width: 100%;
     margin: 1rem 0;
+    border-radius: 0 0 .6rem .6rem;
+    overflow: hidden;
 }
 
 .divHeader{
@@ -41,4 +43,38 @@
         }
     }
 
+}
+
+.animationDown{
+    composes: divBody;
+    animation: heightDown 200ms both;
+    transform-origin: top;
+    animation-fill-mode: backwards;
+}
+
+.animationUp{
+    composes: divBody;
+    animation: heightUp 200ms both;
+    transform-origin: top;
+    animation-fill-mode: forwards ;
+}
+
+@keyframes heightDown {
+    from {
+        transform: scaleY(0);
+    }
+  
+    to {
+        transform: scaleY(100%);
+    }
+}
+
+@keyframes heightUp {
+    from {
+        transform: scaleY(100%);
+    }
+  
+    to {
+        transform: scaleY(0);
+    }
 }

@@ -38,12 +38,13 @@ function Collapse({ title, description, idLogement }) {
             { collapseOpen ? <i className="fa-solid fa-angle-up" /> : '' }
             { !collapseOpen ? <i className="fa-solid fa-angle-down" />: '' }
         </div>
-        { collapseOpen ? 
+        {collapseOpen ?
             <div className={style.divBody}>
                 {
                 type === 'object' ? <ListEquipements /> : description
                 }
-            </div> : '' }
+            </div>
+        : ''}
     </div>
   )
 }

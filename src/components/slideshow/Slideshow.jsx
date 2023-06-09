@@ -56,8 +56,7 @@ function Slideshow({ pictures }) {
         <img 
         className={style.imgCarrousel}
         src={picture} 
-        alt="" 
-        loading='lazy'/>
+        alt="" />
 
         <i 
           className={`fa-solid fa-chevron-right ${style.iconCarrousel}`}
