@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-import colors from "../utils/style/colors.js";
-import sizes from '../utils/style/police.js'
+import colors from "../../utils/style/colors.js";
+import sizes from '../../utils/style/police.js'
 
 
 const Nav = styled.nav`

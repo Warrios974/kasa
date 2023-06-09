@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from '../components/Banner'
 import styled from 'styled-components'
-import Collapse from '../components/Collapse'
+import Collapse from '../../components/collapse/Collapse'
+import Banner from '../../components/banner/Banner'
 
 const StyledSection = styled.section`
   display: flex;

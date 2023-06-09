@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
-import Router from './Router'
+import Header from '../header/Header'
+import Footer from '../footer/Footer'
+import Router from '../router/Router'
 import styled from 'styled-components'
-import colors from '../utils/style/colors.js'
+import colors from '../../utils/style/colors.js'
 //import sizes from '../utils/style/police.js'
 
 const Container = styled.main`

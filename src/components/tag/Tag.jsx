@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import colors from '../utils/style/colors'
-import sizes from '../utils/style/police'
+import colors from '../../utils/style/colors'
+import sizes from '../../utils/style/police'
 
 const StyledTag = styled.span`
     background-color: ${colors.primary};

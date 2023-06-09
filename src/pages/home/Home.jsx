@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import Banner from '../components/Banner'
-import Card from '../components/Card'
-import colors from '../utils/style/colors.js'
-import data from '../data/logement.json'
+import Banner from '../../components/banner/Banner'
+import Card from '../../components/card/Card'
+import colors from '../../utils/style/colors.js'
+import data from '../../data/logement.json'
 
 const StyledSection = styled.section`
   margin: 2rem 0;

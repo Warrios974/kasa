@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from '../navbar/Navbar'
 import styled from 'styled-components'
-import { ReactComponent as LogoColor } from "../assets/logo/logo-color.svg";
+import { ReactComponent as LogoColor } from "../../assets/logo/logo-color.svg";
 
 const StyleLogoColor = styled(LogoColor)`
     width: 8em;

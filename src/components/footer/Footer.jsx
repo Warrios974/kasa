@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ReactComponent as LogoWhite } from "../assets/logo/logo-white.svg";
+import { ReactComponent as LogoWhite } from "../../assets/logo/logo-white.svg";
 
 const FooterHtml = styled.footer`
     display: flex;

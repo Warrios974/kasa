@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import data from '../data/logement.json'
-import Slideshow from '../components/Slideshow'
+import data from '../../data/logement.json'
+import Slideshow from '../../components/slideshow/Slideshow'
 import styled from 'styled-components'
-import sizes from '../utils/style/police'
-import Tag from '../components/Tag'
+import sizes from '../../utils/style/police'
+import Tag from '../../components/tag/Tag'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import colors from '../utils/style/colors'
-import Collapse from '../components/Collapse'
+import colors from '../../utils/style/colors'
+import Collapse from '../../components/collapse/Collapse'
 
 library.add(faStar)
 

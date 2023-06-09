@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import sizes from '../utils/style/police.js'
-import colors from '../utils/style/colors.js'
+import sizes from '../../utils/style/police.js'
+import colors from '../../utils/style/colors.js'
 
 const StyledSection = styled.section`
     display: flex;

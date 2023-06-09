@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import colors from '../utils/style/colors.js'
-import sizes from '../utils/style/police.js'
+import colors from '../../utils/style/colors.js'
+import sizes from '../../utils/style/police.js'
 
 library.add(faChevronLeft, faChevronRight)
 

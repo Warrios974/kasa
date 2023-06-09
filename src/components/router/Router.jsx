@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import About from '../pages/About'
-import Logement from '../pages/Logement'
-import NotFound from '../pages/NotFound'
-import Home from '../pages/Home'
+import About from '../../pages/about/About'
+import Logement from '../../pages/logement/Logement'
+import NotFound from '../../pages/notFound/NotFound'
+import Home from '../../pages/home/Home'
 
 function Router() {
   return (
