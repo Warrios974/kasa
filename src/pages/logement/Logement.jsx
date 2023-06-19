@@ -17,7 +17,6 @@ function Logement() {
     
     useEffect(() => {
         if (logement.length === 0) {
-            //<Navigate to="/404" replace={true} />
             navigate("/404")
         }
     }, [])
