@@ -2,7 +2,7 @@
 @value colorWhite, colorFooter from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textParagraphe from sizes;
+@value textParagraphe, textParagraphePhone from sizes;
 
 .footer{
     display: flex;
@@ -14,9 +14,18 @@
 }
 
 .logo{
-    width: 10em;
+    width: 6rem;    
+    
+    @media only screen and (min-width: 768px) {
+        width: 5rem;
+    }
 }
 
 .text{
     color: colorWhite;
+    font-size: textParagraphePhone;
+
+    @media only screen and (min-width: 768px) {
+        font-size: textParagraphe;
+    }
 }

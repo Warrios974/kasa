@@ -2,15 +2,15 @@
 @value textHeader: 3rem;
 @value textHeaderPhone: 25px;
 @value textTitle: 36px;
-@value textTitlePhone: 36px;
+@value textTitlePhone: 30px;
 @value textSubTitle: 36px;
 @value textSubTitlePhone: 18px;
 @value textParagraphe: 18px;
 @value textParagraphePhone: 15px;
 @value textTag: 14px;
 @value textNotFound: 15em;
-@value textNotFoundPhone : 96px;
+@value textNotFoundPhone: 7rem;
 @value textLink: 18px;
 @value textLinkPhone: 15px;
 @value textStars: 25px;
-@value textStarsPhone: 18px
+@value textStarsPhone: 20px

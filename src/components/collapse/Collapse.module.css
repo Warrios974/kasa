@@ -19,11 +19,12 @@
     background-color: colorPrimary;
     color: colorWhite;
     border-radius: .3rem;
-    padding: .6rem 1rem;
+    padding: .5rem 1rem;
     cursor: pointer;
+    font-size: textParagraphe;
 
     @media only screen and (min-width: 768px) {
-        padding: .9rem 1rem;
+        padding: .5rem 1rem;
     }
 }
 
