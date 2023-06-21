@@ -28,6 +28,12 @@
     width: 100%;
     height: 100%;
     border-radius: .6rem;
+    opacity: 0;
+}
+
+.opacityOne{
+  composes: imgCarrousel;
+  opacity: 1;
 }
 
 .iconCarrousel{

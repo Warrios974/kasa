@@ -6,38 +6,39 @@ function Slideshow({ pictures }) {
 
   const localPictures = JSON.parse(JSON.stringify(pictures))
 
-  const [picture, setPicture] = useState(localPictures[0])
-  const indexPicture = localPictures.findIndex((pic) => pic === picture)
 
-  const [currentIndex, setCurrentIndex] = useState(indexPicture + 1)
-
-  const lengthPictures = localPictures.length
-  const currentPicture = localPictures[indexPicture]
-  const firstPicture = localPictures[0]
-  const lastPicture = localPictures[lengthPictures - 1];
+  const lengthPictures = localPictures.length - 1
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const firstPicture = 0
+  const lastPicture = lengthPictures;
 
   const onlyOne = pictures.length === 1 ? true : false
 
   const handleClick = (action) => {
     if (action === 'next') {
-      const nextPicture = currentPicture === lastPicture ? firstPicture : localPictures[indexPicture + 1]
-      setPicture(nextPicture)
       
-      if (currentPicture === lastPicture){ setCurrentIndex(1)}else{setCurrentIndex(currentIndex + 1)}
+      if (currentIndex === lastPicture){ 
+        setCurrentIndex(0)
+      }else{
+        setCurrentIndex(currentIndex + 1)
+      }
       
     }
     if (action === 'previous') {
-      const nextPicture = currentPicture === firstPicture ? lastPicture : localPictures[indexPicture - 1]
-      setPicture(nextPicture)
-      if (currentPicture === firstPicture){ setCurrentIndex(lengthPictures)}else{setCurrentIndex(currentIndex - 1)}
+
+      if (currentIndex === firstPicture){ 
+        setCurrentIndex(lengthPictures)
+      }else{
+        setCurrentIndex(currentIndex - 1)
+      }
     }
   }
 
   if(onlyOne) return (
     <div className={style.divCarrouselContainer}>
       <img 
-        className={style.imgCarrousel}
-        src={picture} 
+        className={style.opacityOne}
+        src={localPictures[0]} 
         alt="" 
         loading='lazy'/>
     </div>
@@ -51,12 +52,19 @@ function Slideshow({ pictures }) {
           />
 
         <span className={style.pagination}>
-          {`${currentIndex}/${lengthPictures}`}
+          {`${currentIndex + 1}/${localPictures.length}`}
         </span>
-        <img 
-        className={style.imgCarrousel}
-        src={picture} 
-        alt="" />
+
+        {
+          localPictures.map((image, index) => (
+            <img 
+              className={currentIndex === index ? style.opacityOne : style.imgCarrousel}
+              key={`${index}-piture`}
+              id={`${index + 1}`}
+              src={image} 
+              alt="" />
+          ))
+        }
 
         <i 
           className={`fa-solid fa-chevron-right ${style.iconCarrousel}`}
