@@ -10,7 +10,7 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: 7rem;
+    height: 111px;
     border-radius: .6rem;
     text-align: left;
     overflow: hidden;
@@ -19,12 +19,13 @@
         border-radius: 1.5rem;
         height: 15rem;
         justify-content: center;
+        height: 223px;
     }
 }
 
 .InPageAbout{
     composes: section;
-    height: 15rem;
+    height: 223px;
 }
 
 .imgCover{

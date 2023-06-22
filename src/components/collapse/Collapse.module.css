@@ -2,7 +2,7 @@
 @value colorWhite, colorPrimary, colorBackground from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textParagraphe from sizes;
+@value textParagraphe, textParagraphePhone, textCollapsePhone, textCollapse from sizes;
 
 .divContainer{
     width: 100%;
@@ -21,10 +21,11 @@
     padding: .5rem 1rem;
     border-radius: .4rem;
     cursor: pointer;
-    font-size: textParagraphe;
+    font-size: textCollapsePhone;
 
     @media only screen and (min-width: 768px) {
         padding: .5rem 1rem;
+        font-size: textCollapse;
     }
 }
 
@@ -38,17 +39,22 @@
     padding: 1rem;
     text-align: left;
     background-color: colorBackground;
-    line-height: 1.5rem;
+    line-height: 1.3rem;
+    font-size: textParagraphePhone;
 
-    > ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        > li{
-            margin: .3rem 0;
-        }
+    @media only screen and (min-width: 768px) {
+        font-size: textParagraphe;
     }
 
+}
+
+.divBody > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li{
+        margin: .3rem 0;
+    }
 }
 
 .animationDown{

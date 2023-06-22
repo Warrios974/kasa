@@ -2,7 +2,7 @@
 @value colorWhite, colorPrimary from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textParagraphePhone, textTag from sizes;
+@value textParagraphePhone, textTag, textTagPhone from sizes;
 
 
 .tagContainer{
@@ -15,10 +15,14 @@
 .tag{
     background-color: colorPrimary;
     color: colorWhite;
-    font-size: textTag;
+    font-size: textTagPhone;
     margin-right: 1rem;
     margin-top: .5rem;
     padding: .3rem 2rem;
     border-radius: .6rem;
     display: block;
+
+    @media only screen and (min-width: 768px) {
+        font-size: textTag;
+    }
 }

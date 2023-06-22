@@ -2,13 +2,13 @@
 @value colorWhite from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textParagraphe from sizes;
+@value textParagraphe, textTitlePhone from sizes;
 
 .linkCard{
     text-decoration: none;
     width: 100%;
-    height: 15rem;
     display: flex;
+    height: 255px;
     align-items: end;
     border-radius: .6rem;
     overflow: hidden;
@@ -18,7 +18,7 @@
   
     @media only screen and (min-width: 1000px) {
       width: 29%;
-      height: 18rem;
+      height: 340px;
     }
 }
 
@@ -45,4 +45,5 @@
     margin-left: 1rem;
     color: colorWhite;
     font-weight: 100;
+    font-size: textTitlePhone;
 }
