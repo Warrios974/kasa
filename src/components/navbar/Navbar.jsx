@@ -6,22 +6,10 @@ function Navbar() {
 
   const { pathname } = useLocation()
 
-  if(pathname === '/') return (
-    <nav className={style.navContainer}>
-        <Link className={style.underline} to="/">Accueil</Link>
-        <Link className={style.link} to="/about">A propos</Link>
-    </nav>
-  )
-  if(pathname === '/about') return (
-    <nav className={style.navContainer}>
-        <Link className={style.link} to="/">Accueil</Link>
-        <Link className={style.underline} to="/about">A propos</Link>
-    </nav>
-  )
   return (
     <nav className={style.navContainer}>
-        <Link className={style.link} to="/">Accueil</Link>
-        <Link className={style.link} to="/about">A propos</Link>
+        <Link className={pathname === '/' ? style.underline : style.link} to="/">Accueil</Link>
+        <Link className={pathname === '/about' ? style.underline : style.link} to="/about">A propos</Link>
     </nav>
   )
 }
