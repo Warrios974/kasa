@@ -2,7 +2,7 @@
 @value colorWhite, colorPrimary, colorStarsGray from colors;
 
 @value sizes: "../../utils/style/sizes.module.css";
-@value textTitle, textTitlePhone, textSubTitlePhone, textStars, textStarsPhone, textParagraphePhone, textParagraphe from sizes;
+@value textTitle, textTitlePhone, textSubTitlePhone, textParagraphe, textStars, textStarsPhone, textParagraphePhone, textParagraphe from sizes;
 
 .sectionInfoContainer{
     display: flex;
@@ -33,6 +33,10 @@
 
 .subTitle{
     font-size: textSubTitlePhone;
+
+    @media only screen and (min-width: 768px) {
+        font-size: textParagraphe;
+    }
 }
 
 .rateAndHostContainer{
