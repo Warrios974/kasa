@@ -24,6 +24,11 @@
     font-weight: 500;
     margin-bottom: 1rem;
     font-size: textTitlePhone;
+
+    @media only screen and (min-width: 768px) {
+        font-size: textTitle;
+    }
+    
 }
 
 .subTitle{
