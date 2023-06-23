@@ -14,7 +14,7 @@ function Banner({ propsBanner }) {
         <img className={style.imgCover} src={background} alt=''/>
         {
             title !== '' &&
-            <h1 className={style.title}>Chez vous, partout et ailleurs</h1>
+            <h1 className={style.title}>{title}</h1>
         }
     </section>
   )
